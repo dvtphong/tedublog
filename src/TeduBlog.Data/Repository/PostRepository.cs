@@ -17,7 +17,7 @@ namespace TeduBlog.Data.Repository
     {
         private readonly IMapper _mapper;
 
-        public PostRepository(TeduDBContext context) : base(context)
+        public PostRepository(TeduDBContext context, IMapper mapper) : base(context)
         {
             _mapper = mapper;
         }
