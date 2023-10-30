@@ -16,13 +16,12 @@ import {
 } from '@coreui/angular';
 import { IconModule } from '@coreui/icons-angular';
 import { ChartjsModule } from '@coreui/angular-chartjs';
-
-import { DashboardRoutingModule } from './dashboard-routing.module';
-import { DashboardComponent } from './dashboard.component';
+import { SystemComponent } from './system.component';
+import { SystemRoutingModule } from './system-routing.module';
 
 @NgModule({
   imports: [
-    DashboardRoutingModule,
+    SystemRoutingModule,
     CardModule,
     NavModule,
     IconModule,
@@ -39,7 +38,7 @@ import { DashboardComponent } from './dashboard.component';
     AvatarModule,
     TableModule
   ],
-  declarations: [DashboardComponent]
+  declarations: [SystemComponent, SystemComponent]
 })
-export class DashboardModule {
+export class SystemModule {
 }
