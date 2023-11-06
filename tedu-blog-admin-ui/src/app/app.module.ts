@@ -18,6 +18,7 @@ import { ToastModule } from 'primeng/toast';
 import { MessageService } from 'primeng/api';
 import { AlertService } from './shared/services/alert.service';
 import { TokenStorageService } from './shared/services/token-storage.service';
+import { NgxSpinnerModule } from "ngx-spinner";
 
 import {
   AvatarModule,
@@ -81,7 +82,9 @@ const APP_CONTAINERS = [
     CardModule,
     NgScrollbarModule,
     ToastModule,
-    HttpClientModule
+    HttpClientModule,
+    BrowserAnimationsModule,
+    NgxSpinnerModule,
   ],
   providers: [
     { provide: ADMIN_API_BASE_URL, useValue: environment.API_URL },

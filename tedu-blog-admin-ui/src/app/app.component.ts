@@ -9,7 +9,9 @@ import { Title } from '@angular/platform-browser';
   selector: 'app-root',
   template: `
   <p-toast position="top-center"></p-toast>
-  <router-outlet></router-outlet>`,
+  <router-outlet></router-outlet>
+  <ngx-spinner bdColor = "rgba(0, 0, 0, 0.8)" size = "medium" color = "#fff" type = "ball-spin-clockwise" [fullScreen] = "true"><p style="color: white" > Vui lòng đợi... </p></ngx-spinner>
+  `,
 })
 
 export class AppComponent implements OnInit {
