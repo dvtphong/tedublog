@@ -1,22 +1,26 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { PostsComponent } from './posts/posts.component';
-
+import { AuthGuard } from 'src/app/shared/auth.guard';
 const routes: Routes = [
   {
     path: '',
-    redirectTo: 'post',
-    pathMatch: 'full'
+    redirectTo: 'posts',
+    pathMatch: 'full',
   },
   {
     path: 'posts',
-    component: PostsComponent
-  }
+    component: PostsComponent,
+    data: {
+      title: 'Bài viết',
+      requiredPolicy: 'Permissions.Posts.View',
+    },
+    canActivate: [AuthGuard],
+  },
 ];
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class ContentRoutingModule {
-}
+export class ContentRoutingModule { }
