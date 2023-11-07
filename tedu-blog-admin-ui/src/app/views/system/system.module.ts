@@ -16,6 +16,7 @@ import { RoleComponent } from './role/role.component';
 import { SystemComponent } from './system.component';
 import { RolesDetailComponent } from './role-detail/role-detail.component';
 import { TeduSharedModule } from 'src/app/shared/modules/tedu-shared.module';
+import { PermissionGrantComponent } from './permission-grant/permission-grant.component';
  
 @NgModule({
   imports: [
@@ -33,7 +34,7 @@ import { TeduSharedModule } from 'src/app/shared/modules/tedu-shared.module';
     SharedModule,
     TeduSharedModule
   ],
-  declarations: [SystemComponent, UsersComponent, RoleComponent, RolesDetailComponent]
+  declarations: [SystemComponent, UsersComponent, RoleComponent, RolesDetailComponent, PermissionGrantComponent]
 })
 export class SystemModule {
 }
