@@ -17,7 +17,14 @@ import { SystemComponent } from './system.component';
 import { RolesDetailComponent } from './role-detail/role-detail.component';
 import { TeduSharedModule } from 'src/app/shared/modules/tedu-shared.module';
 import { PermissionGrantComponent } from './permission-grant/permission-grant.component';
- 
+import { ChangeEmailComponent } from './change-email/change-email.component';
+import { RoleAssignComponent } from './role-assign/role-assign.component';
+import { SetPasswordComponent } from './set-password/set-password.component';
+import { UserDetailComponent } from './user-detail/user-detail.component';
+import { BadgeModule } from 'primeng/badge';
+import { PickListModule } from 'primeng/picklist';
+import { ImageModule } from 'primeng/image';
+
 @NgModule({
   imports: [
     SystemRoutingModule,
@@ -32,9 +39,13 @@ import { PermissionGrantComponent } from './permission-grant/permission-grant.co
     ButtonModule,
     InputTextModule,
     SharedModule,
-    TeduSharedModule
+    TeduSharedModule,
+    BadgeModule,
+    PickListModule,
+    ImageModule
   ],
-  declarations: [SystemComponent, UsersComponent, RoleComponent, RolesDetailComponent, PermissionGrantComponent]
+  declarations: [SystemComponent, UsersComponent, RoleComponent, RolesDetailComponent,
+    PermissionGrantComponent, ChangeEmailComponent, RoleAssignComponent, SetPasswordComponent, UserDetailComponent]
 })
 export class SystemModule {
 }

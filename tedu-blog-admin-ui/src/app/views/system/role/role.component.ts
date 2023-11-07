@@ -9,9 +9,9 @@ import { RolesDetailComponent } from '../role-detail/role-detail.component';
 import { PermissionGrantComponent } from '../permission-grant/permission-grant.component';
 
 @Component({
-  selector: 'app-users',
-  templateUrl: './users.component.html',
-  styleUrls: ['./users.component.scss']
+  selector: 'app-role',
+  templateUrl: './role.component.html',
+  styleUrls: ['./role.component.scss']
 })
 export class RoleComponent implements OnInit, OnDestroy {
   //System variables
