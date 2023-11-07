@@ -10,6 +10,12 @@ import { Title } from '@angular/platform-browser';
   template: `
   <p-toast position="top-center"></p-toast>
   <router-outlet></router-outlet>
+  <p-confirmDialog
+  header="Xác nhận"
+  acceptLabel="Có"
+  rejectLabel="Không"
+  icon="pi pi-exclamation-triangle"
+></p-confirmDialog>
   <ngx-spinner bdColor = "rgba(0, 0, 0, 0.8)" size = "medium" color = "#fff" type = "ball-spin-clockwise" [fullScreen] = "true"><p style="color: white" > Vui lòng đợi... </p></ngx-spinner>
   `,
 })

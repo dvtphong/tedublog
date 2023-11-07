@@ -48,7 +48,9 @@ import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 import { AuthGuard } from './shared/auth.guard';
 import { TokenInterceptor } from './shared/interceptors/token.interceptor';
 import { GlobalHttpInterceptorService } from './shared/interceptors/error-handler.interceptor';
-import { DialogService } from 'primeng/dynamicdialog';
+import { DialogService, DynamicDialogModule } from 'primeng/dynamicdialog';
+import { UtilityService } from './shared/services/utility.service';
+import { ConfirmDialogModule } from 'primeng/confirmdialog';
 
 const APP_CONTAINERS = [
   DefaultFooterComponent,
@@ -89,6 +91,8 @@ const APP_CONTAINERS = [
     HttpClientModule,
     BrowserAnimationsModule,
     NgxSpinnerModule,
+    ConfirmDialogModule,
+    DynamicDialogModule
   ],
   providers: [
     { provide: ADMIN_API_BASE_URL, useValue: environment.API_URL },
@@ -113,6 +117,7 @@ const APP_CONTAINERS = [
     AdminApiAuthApiClient,
     AdminApiTestApiClient,
     AdminApiRoleApiClient,
+    UtilityService,
     DialogService,
     ConfirmationService ,
     TokenStorageService,

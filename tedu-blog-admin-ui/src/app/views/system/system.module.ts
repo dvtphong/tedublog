@@ -14,7 +14,9 @@ import { InputTextModule } from 'primeng/inputtext';
 import { UsersComponent } from './users/users.component';
 import { RoleComponent } from './role/role.component';
 import { SystemComponent } from './system.component';
-
+import { RolesDetailComponent } from './role-detail/role-detail.component';
+import { TeduSharedModule } from 'src/app/shared/modules/tedu-shared.module';
+ 
 @NgModule({
   imports: [
     SystemRoutingModule,
@@ -28,9 +30,10 @@ import { SystemComponent } from './system.component';
     CheckboxModule,
     ButtonModule,
     InputTextModule,
-    SharedModule
+    SharedModule,
+    TeduSharedModule
   ],
-  declarations: [SystemComponent, UsersComponent, RoleComponent]
+  declarations: [SystemComponent, UsersComponent, RoleComponent, RolesDetailComponent]
 })
 export class SystemModule {
 }
