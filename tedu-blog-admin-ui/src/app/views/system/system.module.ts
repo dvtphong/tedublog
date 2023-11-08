@@ -24,6 +24,7 @@ import { UserDetailComponent } from './user-detail/user-detail.component';
 import { BadgeModule } from 'primeng/badge';
 import { PickListModule } from 'primeng/picklist';
 import { ImageModule } from 'primeng/image';
+import { KeyFilterModule } from 'primeng/keyfilter';
 
 @NgModule({
   imports: [
@@ -38,6 +39,7 @@ import { ImageModule } from 'primeng/image';
     CheckboxModule,
     ButtonModule,
     InputTextModule,
+    KeyFilterModule,
     SharedModule,
     TeduSharedModule,
     BadgeModule,
