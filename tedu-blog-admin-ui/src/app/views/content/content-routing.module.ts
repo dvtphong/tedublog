@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { PostsComponent } from './posts/posts.component';
 import { AuthGuard } from 'src/app/shared/auth.guard';
 import { PostCategoriesComponent } from './post-categories/post-categories.component';
+import { SeriesComponent } from './series/series.component';
 
 const routes: Routes = [
   {
@@ -27,6 +28,14 @@ const routes: Routes = [
       requiredPolicy: 'Permissions.PostCategories.View',
     },
     canActivate: [AuthGuard],
+  },
+  {
+    path: 'series',
+    component: SeriesComponent,
+    canActivate: [AuthGuard],
+    data: {
+      requiredPolicy: 'Permissions.Series.View',
+    },
   },
 ];
 

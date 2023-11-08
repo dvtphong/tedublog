@@ -20,6 +20,21 @@ import { InputTextModule } from 'primeng/inputtext';
 import { ContentComponent } from './content.component';
 import { PostCategoriesComponent } from './post-categories/post-categories.component';
 import { PostCategoryDetailComponent } from './post-category-detail/post-category-detail.component';
+import { PostActivityLogsComponent } from './post-activity-logs/post-activity-logs.component';
+import { PostDetailComponent } from './post-detail/post-detail.component';
+import { PostReturnReasonComponent } from './post-return-reason/post-return-reason.component';
+import { PostSeriesComponent } from './post-series/post-series.component';
+import { SeriesDetailComponent } from './series-detail/series-detail.component';
+import { SeriesPostsComponent } from './series-posts/series-posts.component';
+import { DropdownModule } from '@coreui/angular';
+import { DynamicDialogModule } from 'primeng/dynamicdialog';
+import { ImageModule } from 'primeng/image';
+import { InputNumberModule } from 'primeng/inputnumber';
+import { AutoCompleteModule } from 'primeng/autocomplete';
+import { InputTextareaModule } from 'primeng/inputtextarea';
+import { EditorModule } from 'primeng/editor';
+import { PostsComponent } from './posts/posts.component';
+import { SeriesComponent } from './series/series.component';
 
 @NgModule({
   imports: [
@@ -38,9 +53,17 @@ import { PostCategoryDetailComponent } from './post-category-detail/post-categor
     KeyFilterModule,
     TeduSharedModule,
     ButtonModule,
-    InputTextModule
+    InputTextModule,
+    InputTextareaModule,
+    DropdownModule,
+    EditorModule,
+    InputNumberModule,
+    ImageModule,
+    AutoCompleteModule,
+    DynamicDialogModule
   ],
-  declarations: [ContentComponent, PostCategoriesComponent, PostCategoryDetailComponent]
+  declarations: [ContentComponent,PostsComponent, PostCategoriesComponent, PostCategoryDetailComponent, 
+    PostActivityLogsComponent, PostDetailComponent, PostReturnReasonComponent, PostSeriesComponent, SeriesComponent, SeriesDetailComponent, SeriesPostsComponent]
 })
 export class ContentModule {
 }

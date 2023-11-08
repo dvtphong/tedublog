@@ -8,7 +8,6 @@ namespace TeduBlog.Core.Domain.Content
     {
         [Key]
         public Guid Id { get; set; }
-
         public Guid PostId { get; set; }
 
         public PostStatus FromStatus { set; get; }
@@ -21,5 +20,8 @@ namespace TeduBlog.Core.Domain.Content
         public string? Note { set; get; }
 
         public Guid UserId { get; set; }
+
+        [MaxLength(250)]
+        public string UserName { get; set; }
     }
 }

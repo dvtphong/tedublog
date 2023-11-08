@@ -1,4 +1,6 @@
 ﻿using AutoMapper;
+using Microsoft.AspNetCore.Identity;
+using TeduBlog.Core.Domain.Identity;
 using TeduBlog.Core.Repository;
 using TeduBlog.Core.SeedWorks;
 using TeduBlog.Data.Repository;
@@ -9,15 +11,17 @@ namespace TeduBlog.Data.SeedWorks
     {
         private readonly TeduDBContext _context;
 
-        public UnitOfWork(TeduDBContext context, IMapper mapper)
+        public UnitOfWork(TeduDBContext context, IMapper mapper, UserManager<AppUser> userManager)
         {
             _context = context;
-            Posts = new PostRepository(context, mapper);
+            Posts = new PostRepository(context, mapper, userManager);
             PostCategories = new PostCategoryRepository(context, mapper);
+            Series = new SeriesRepository(context, mapper);
+
         }
         public IPostRepository Posts { get; private set; }
-
         public IPostCategoryRepository PostCategories { get; private set; }
+        public ISeriesRepository Series { get; private set; }
 
         public async Task<int> CompleteAsync()
         {
