@@ -14,9 +14,11 @@ using TeduBlog.Core.ConfigOptions;
 using TeduBlog.Core.Domain.Identity;
 using TeduBlog.Core.Models.Content;
 using TeduBlog.Core.SeedWorks;
+using TeduBlog.Core.Services;
 using TeduBlog.Data;
 using TeduBlog.Data.Repository;
 using TeduBlog.Data.SeedWorks;
+using TeduBlog.Data.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 var configuration = builder.Configuration;
@@ -89,6 +91,7 @@ builder.Services.AddScoped<SignInManager<AppUser>, SignInManager<AppUser>>();
 builder.Services.AddScoped<UserManager<AppUser>, UserManager<AppUser>>();
 builder.Services.AddScoped<ITokenService, TokenService>();
 builder.Services.AddScoped<RoleManager<AppRole>, RoleManager<AppRole>>();
+builder.Services.AddScoped<IRoyaltyService, RoyaltyService>();
 
 // Default config for ASP.NET Core
 builder.Services.AddControllers();
