@@ -13,7 +13,6 @@ import { PostCategoryDetailComponent } from '../post-category-detail/post-catego
   styleUrls: ['./post-categories.component.scss']
 })
 export class PostCategoriesComponent implements OnInit, OnDestroy {
-
   //System variables
   private ngUnsubscribe = new Subject<void>();
   public blockedPanel: boolean = false;
@@ -82,7 +81,7 @@ export class PostCategoriesComponent implements OnInit, OnDestroy {
   }
 
   pageChanged(event: any): void {
-    this.pageIndex = event.page;
+    this.pageIndex = event.page + 1;
     this.pageSize = event.rows;
     this.loadData();
   }
@@ -158,5 +157,4 @@ export class PostCategoriesComponent implements OnInit, OnDestroy {
     }
 
   }
-
 }

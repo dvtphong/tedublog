@@ -114,6 +114,7 @@ const APP_CONTAINERS = [
     Title,
     MessageService,
     AlertService,
+    AdminApiAuthApiClient,
     AdminApiTestApiClient,
     AdminApiTokenApiClient,
     AdminApiRoleApiClient,

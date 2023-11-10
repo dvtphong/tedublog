@@ -63,7 +63,7 @@ export class RoleComponent implements OnInit, OnDestroy {
   }
 
   pageChanged(event: any): void {
-    this.pageIndex = event.page;
+    this.pageIndex = event.page + 1;
     this.pageSize = event.rows;
     this.loadData();
   }
@@ -99,7 +99,6 @@ export class RoleComponent implements OnInit, OnDestroy {
       }
     });
   }
-
   showEditModal() {
     if (this.selectedItems.length == 0) {
       this.alertService.showError(MessageConstants.NOT_CHOOSE_ANY_RECORD);

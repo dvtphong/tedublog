@@ -4940,8 +4940,8 @@ export class UserDto implements IUserDto {
     vipExpireDate?: Date | undefined;
     lastLoginDate?: Date | undefined;
     balance?: number;
-    royaltyAmountPerPost?: number
-    
+    royaltyAmountPerPost?: number;
+
     constructor(data?: IUserDto) {
         if (data) {
             for (var property in data) {
@@ -4972,6 +4972,7 @@ export class UserDto implements IUserDto {
             this.vipExpireDate = _data["vipExpireDate"] ? new Date(_data["vipExpireDate"].toString()) : <any>undefined;
             this.lastLoginDate = _data["lastLoginDate"] ? new Date(_data["lastLoginDate"].toString()) : <any>undefined;
             this.balance = _data["balance"];
+            this.royaltyAmountPerPost = _data["royaltyAmountPerPost"];
         }
     }
 
@@ -5003,6 +5004,7 @@ export class UserDto implements IUserDto {
         data["vipExpireDate"] = this.vipExpireDate ? this.vipExpireDate.toISOString() : <any>undefined;
         data["lastLoginDate"] = this.lastLoginDate ? this.lastLoginDate.toISOString() : <any>undefined;
         data["balance"] = this.balance;
+        data["royaltyAmountPerPost"] = this.royaltyAmountPerPost;
         return data;
     }
 }
@@ -5023,6 +5025,7 @@ export interface IUserDto {
     vipExpireDate?: Date | undefined;
     lastLoginDate?: Date | undefined;
     balance?: number;
+    royaltyAmountPerPost?: number;
 }
 
 export class UserDtoPagedResult implements IUserDtoPagedResult {

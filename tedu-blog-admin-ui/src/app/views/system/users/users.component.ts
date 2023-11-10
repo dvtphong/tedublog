@@ -90,7 +90,7 @@ export class UsersComponent implements OnInit, OnDestroy {
   }
 
   pageChanged(event: any): void {
-    this.pageIndex = event.page;
+    this.pageIndex = event.page + 1;
     this.pageSize = event.rows;
     this.loadData();
   }
